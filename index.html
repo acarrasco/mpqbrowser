@@ -10,10 +10,15 @@
             background-color: antiquewhite;
         }
 
+        pre {
+            border: solid 1px black;
+        }
+
         .custom>* {
             display: block;
         }
         .custom textarea {
+            margin-bottom: 0.25em;
             width: 100%;
         }
 
@@ -33,6 +38,16 @@
 <h1>
     MPQ BROWSER
 </h1>
+
+Why don't you try one of these queries?
+<pre>
+    % find characters that stun
+    character(Name, Variant, _), power(Name, Variant, Power, _, _), power_trait(Power, stun, Who).
+</pre>
+<pre>
+    % find characters that deal damage to all enemies
+    character(Name, Variant, _), power(Name, Variant, Power, _, _), power_trait(Power, direct_damage, all_enemies).
+</pre>
 
 <div class="custom">
     <textarea id="custom-query-text"></textarea>

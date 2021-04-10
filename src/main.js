@@ -8,9 +8,9 @@ const argument_names = {
     'character/3': ['Name', 'Variant', 'Rarity'],
     'affiliation/3': ['Name', 'Variant', 'Affiliation'],
     'power/5': ['Name', 'Variant', 'Power', 'Color', 'Cost'],
+    'power_trait/2': ['Power', 'Trait'],
     'power_trait/3': ['Power', 'Trait', 'Objective'],
     'power_trait/4': ['Power', 'Trait', 'Objective1', 'Objective2'],
-    'power_trait/5': ['Power', 'Trait', 'Objective1', 'Objective2', 'Objective3'],
 }
 
 
