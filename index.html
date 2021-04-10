@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <script type="application/javascript" src="./lib/tau-prolog.js"></script>
+    <script type="application/javascript" src="./src/main.js"></script>
+    <style>
+
+        body { 
+            font-family: arial, sans-serif;
+            background-color: antiquewhite;
+        }
+
+        .custom>* {
+            display: block;
+        }
+        .custom textarea {
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<h1>
+    MPQ BROWSER
+</h1>
+
+<div class="custom">
+    <textarea id="custom-query-text"></textarea>
+    <input id="run-custom-query" type="button" value="run custom query" onclick="run_custom_query()"/>
+</div>
+
+
+<table id="output">
+</table>
+
+</html>
