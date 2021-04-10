@@ -2,7 +2,7 @@
 
 This is a small utility to query the characters roster in [Marvel Puzzle Quest](https://www.marvel.com/games/marvel-puzzle-quest).
 
-You can try it here.
+You can try it [here](https://acarrasco.github.io/mpqbrowser/).
 
 ## Contributing
 
