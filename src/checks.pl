@@ -1,8 +1,6 @@
 :- discontiguous character/3.
 :- discontiguous affiliation/3.
 :- discontiguous power/5.
-:- discontiguous power_trait/2.
-:- discontiguous power_trait/3.
 :- discontiguous power_trait/4.
 
 rarity(common).
@@ -38,6 +36,6 @@ invalid_power(Power):- power(_, _, Power, Color, _), not(color(Color)).
 invalid_power(Power):- power(Name, Variant, Power, _, _), not(character(Name, Variant, _)).
 invalid_power(Power):- power(_, _, Power, _, Cost), not(number(Cost)).
 
-invalid_power_trait(Power):- power_trait(Power, _), not(power(_, _, Power, _, _)).
-invalid_power_trait(Power):- power_trait(Power, _, _), not(power(_, _, Power, _, _)).
 invalid_power_trait(Power):- power_trait(Power, _, _, _), not(power(_, _, Power, _, _)).
+invalid_power_trait(Power):- power_trait(Power, _, Target, _), not(is_list(Target)).
+invalid_power_trait(Power):- power_trait(Power, _, _, Dest), not(is_list(Dest)).
