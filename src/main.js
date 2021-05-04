@@ -32,6 +32,17 @@ function flatten_query_args(query) {
     return helper(query);
 }
 
+function flatten_terms_list(term, acc) {
+    if (term.id !== '.' && term.id !== '[]') {
+        return term.id;
+    }
+    if (term.args.length === 2) {
+        acc.push(term.args[0].id);
+        return flatten_terms_list(term.args[1], acc);
+    }
+    return acc.join(', ');
+}
+
 function run_custom_query(query) {
     run_query(document.getElementById('custom-query-text').value);
 }
@@ -81,7 +92,7 @@ function display_results(query, results) {
         const row = [];
         for (const arg of arguments) {
             const value = (result.links[arg] || arg);
-            row.push(value.id || value.value);
+            row.push(flatten_terms_list(value, []) || value.value);
         }
         parsed_results.push(row);
     }

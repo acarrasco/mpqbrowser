@@ -42,11 +42,11 @@
 Why don't you try one of these queries?
 <pre>
     % find characters that stun
-    character(Name, Variant, _), power(Name, Variant, Power, _, _), power_trait(Power, stun, Who).
+    character(Name, Variant, _), power(Name, Variant, Power, _, _), power_trait(Power, stun, Who, _).
 </pre>
 <pre>
     % find characters that deal damage to all enemies
-    character(Name, Variant, _), power(Name, Variant, Power, _, _), power_trait(Power, direct_damage, all_enemies).
+    character(Name, Variant, _), power(Name, Variant, Power, _, _), power_trait(Power, direct_damage, [all_enemies], _).
 </pre>
 
 <div class="custom">
